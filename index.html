@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Plain Dealer</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header role="banner">
+    <div class="container">
+        <div class="logo-menu-container">
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://via.placeholder.com/200x50?text=Cleveland+Logo" alt="Cleveland.com Logo" class="cle-logo" /></a>
+            <div class="menu-weather-container">
+                <div class="hamburger-menu">
+                    <button class="hamburger-btn" aria-label="Toggle navigation menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <div class="weather-menu">
+                    <button class="weather-btn" type="button">
+                        Set Weather <span class="arrow-down">▼</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <section class="subscribe">
+                <button type="button">Subscribe</button>
+            </section>
+            <div class="sign-in-container">
+                <button type="button" class="sign-in-btn" onclick="toggleDropdown()">
+                    <span class="sign-in-icon">👤</span>
+                    <span class="sign-in-text">Sign in</span>
+                    <span class="arrow-down">▼</span>
+                </button>
+                <div id="signInDropdown" class="dropdown-menu">
+                    <a href="#">Sign in</a>
+                    <a href="#">Create Account</a>
+                    <a href="#">Newsletters</a>
+                    <a href="#">Custom Alerts</a>
+                    <a href="#">Help/FAQ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="index.js"></script>
+</body>
+</html>
