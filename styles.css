@@ -88,7 +88,7 @@ header .container {
 /* Bottone Subscribe */
 .subscribe {
     position: relative;
-    top: 2px;
+    top: 25px;
 }
 .subscribe button {
     padding: 0.5rem 1.5rem;
@@ -182,19 +182,10 @@ header .container {
         border: 2px solid #333333;
     }
 }
-/*Edition title*/
-.edition-title {
-    margin-top: 0.2rem;
-    margin-bottom: 3rem;
-    padding-left: 8rem;
-}
-.edition-title h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 550;
-    color: #555555;
-}
 /* Today's Edition */
+section {
+    margin-bottom: 3rem;
+}
 .latest-edition {
     padding: 4rem 1rem;
     background-color: #fafafa;
@@ -312,4 +303,190 @@ nav ul li a:hover {
     color: #555;
     margin-top: 0.5rem;
     line-height: 1.4;
+}
+/* Archives Link Styling */
+.archives-link-container {
+    text-align: left;
+    margin-top: 2rem;
+}
+.archives-link {
+    font-size: 1.2rem;
+    color: #0078d4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.archives-link:hover {
+    color: #000000; /* passaggio del mouse */
+}
+/* Articles Grid */
+.articles-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.articles-grid article {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+}
+.articles-grid article img {
+    width: 100%;
+    height: auto;
+}
+.articles-grid article h3 {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+.articles-grid article p {
+    font-size: 1em;
+    color: #555;
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #003366;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+@media (max-width: 900px) {
+    .articles-grid article {
+        width: 45%;
+    }
+}
+@media (max-width: 600px) {
+    .articles-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .articles-grid article {
+        width: 90%;
+    }
+    .edition-preview {
+        flex-direction: column;
+    }
+    .edition-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .edition-text {
+        max-width: 90%;
+    }
+}
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 0;
+}
+.footer-image-container1 {
+    position: relative;
+    margin-top: 0;
+    padding: 0 1rem 1rem 1rem;
+    text-align: left;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin: 5px 0;
+}
+.footer-section ul li a {
+    color: #333333;
+    text-decoration: none;
+}
+.footer-section ul li a:hover {
+    color: #f4f4f4;
+}
+/* Footer Link Styles */
+.footer-links {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+    padding-left: 230px;
+    padding-right: 50px;
+}
+.footer-links a {
+    color:#555555;
+    text-decoration: underline;
+    font-size: 1rem;
+    margin: 0 10px;
+}
+.footer-links a:hover {
+    color: #555555;
+}
+.footer-section ul li a:hover {
+    color: #ffffff;
+}
+.footer-section ul li a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-section {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .footer-links a {
+        margin: 5px 0;
+    }
+}
+/* Barra di separazione */
+.separator {
+    color: #000000;
+    margin: 0 10px;
+}
+/* Personalizzazione della barra orizzontale */
+.separator-line {
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items:center ;
+        margin-top: 1rem;
+    }
+    .footer-links a {
+        margin: 5px 0;
+    }
+    .separator {
+        display: none;
+    }
 }
