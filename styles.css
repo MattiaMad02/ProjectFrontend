@@ -392,16 +392,23 @@ footer {
 }
 footer .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
     flex-wrap: wrap;
     padding-bottom: 2rem;
 }
-.footer-section {
+.footer-group {
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    margin: 10px;
+    min-width: 150px;
+}
+.footer-section {
+    margin-bottom: 1.5rem;
 }
 .footer-section h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 10px;
 }
 .footer-section ul {
@@ -410,6 +417,7 @@ footer .container {
 }
 .footer-section ul li {
     margin: 5px 0;
+    font-size: 0.85rem;
 }
 .footer-section ul li a {
     color: #333333;
@@ -425,7 +433,7 @@ footer .container {
     justify-content: flex-start;
     align-items: center;
     margin-top: 1rem;
-    padding-left: 230px;
+    padding-left: 50px;
     padding-right: 50px;
 }
 .footer-links a {
@@ -438,15 +446,23 @@ footer .container {
     color: #555555;
 }
 .footer-section ul li a:hover {
-    color: #ffffff;
+    color: #0078d4;
+    text-decoration: underline;
 }
 .footer-section ul li a {
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Barra di separazione */
+.separator {
+    color: #000000;
+    margin: 0 10px;
 }
 @media (max-width: 768px) {
     footer .container {
         flex-direction: column;
         align-items: flex-start;
+        padding-right: 0;
+        padding-left: 0;
     }
     .footer-section {
         flex: 0 0 100%;
@@ -455,42 +471,27 @@ footer .container {
     .footer-links {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        text-align: center;
+        justify-content: left;
+        text-align: left;
         width: 100%;
         padding-left: 0;
         padding-right: 0;
+        margin-top: 10rem;
     }
     .footer-links a {
-        margin: 5px 0;
+        margin: 20px 0;
     }
-}
-/* Barra di separazione */
-.separator {
-    color: #000000;
-    margin: 0 10px;
+    .separator{
+        display: none;
+    }
 }
 /* Personalizzazione della barra orizzontale */
 .separator-line {
     border: 0;
     height: 1px;
     background-color: #000000;
-    margin-top: 10px;
     margin-bottom: 20px;
     width: 100%;
-}
-@media (max-width: 768px) {
-    .footer-links {
-        flex-direction: column;
-        align-items:center ;
-        margin-top: 1rem;
-    }
-    .footer-links a {
-        margin: 5px 0;
-    }
-    .separator {
-        display: none;
-    }
 }
 /*footer image*/
 .footer-image-container {
