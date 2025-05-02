@@ -1,4 +1,4 @@
-function toggleDropdown() {
+/*function toggleDropdown() {
     const dropdown = document.getElementById('signInDropdown');
     dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
 }
@@ -9,7 +9,7 @@ window.onclick = function(event) {
         if (dropdown.style.display === 'block') {
             dropdown.style.display = 'none';
         }
-    }}
+    }}*/
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = [
     'January', 'February', 'March', 'April', 'May', 'June',

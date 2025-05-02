@@ -35,14 +35,14 @@ header .container {
 /* Logo Cleveland */
 .cle-logo {
     position: absolute;
-    left: 50%;
+    left: 45%;
     top:10px;
-    max-width: 20px; /* Regola la dimensione del logo */
+    max-width: 100px;
 }
 .menu-weather-container {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* spazio tra hamburger e weather */
+    gap: 0.5rem;
 }
 .weather-btn {
     background: none;
@@ -63,7 +63,7 @@ header .container {
 /* Menu Hamburger */
 .hamburger-menu {
     position: relative;
-    margin-left: 10px; /* Distanza tra logo e hamburger */
+    margin-left: 10px;
 }
 .hamburger-btn {
     background: none;
@@ -98,14 +98,14 @@ header .container {
     border-radius: 999px;
     cursor: pointer;
     font-size: 1.1rem;
-    line-height: 0.5;
+    line-height: 1;
 }
 /* Bottone Sign In */
 .sign-in-container {
     margin-left: 20px;
     position: relative;
 }
-.dropdown-menu {
+/*.dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -117,17 +117,15 @@ header .container {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-
 .dropdown-menu a {
     color: black;
     padding: 10px;
     text-decoration: none;
     display: block;
 }
-
 .dropdown-menu a:hover {
     background-color: #f0f0f0;
-}
+}*/
 .sign-in-btn {
     padding: 0.75rem 1.5rem;
     background-color: #333333;
@@ -212,7 +210,6 @@ section {
     margin-top: 1rem;
     text-align: left;
 }
-
 .read-button {
     display: inline-block;
     margin-top: 1rem;
@@ -300,6 +297,17 @@ nav ul li a:hover {
     color: #555;
     margin-top: 0.5rem;
     line-height: 1.4;
+}
+.ad-between {
+    text-align: center;
+    margin: 2rem auto;
+}
+.ad-between img {
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 /* Archives Link Styling */
 .archives-button-container {
@@ -427,6 +435,10 @@ footer .container {
         align-items: flex-start;
         padding-right: 0;
         padding-left: 0;
+    }
+    .footer-image-container1 {
+        margin-left: 0;
+        text-align: left;
     }
     .footer-section {
         flex: 0 0 100%;
