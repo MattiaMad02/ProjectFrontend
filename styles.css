@@ -147,39 +147,6 @@ header .container {
     margin: 0 0.2rem;
     font-size: 1rem;
 }
-/* Responsive */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .weather-btn {
-        display: none;
-    }
-    /* Logo e Hamburger in linea su mobile */
-    .logo-menu-container {
-        align-items: center;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row-reverse;
-    }
-    .cle-logo {
-        position: static;
-        transform: none;
-        max-width: 80px;
-        height: auto;
-    }
-    .sign-in-container {
-        margin-left: 10px;
-        .sign-in-text{
-            display:none;
-        }
-    }
-    .sign-in-btn:hover {
-        background-color: #333333;
-        border: 2px solid #333333;
-    }
-}
 /* Today's Edition */
 section {
     margin-bottom: 3rem;
@@ -325,30 +292,6 @@ nav ul li a:hover {
     color: #000000;
     text-decoration: none;
 }
-@media (max-width: 768px) {
-    .editions-grid {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .edition-preview {
-        max-width: 100%;
-        text-align: left;
-    }
-    .edition-item {
-        align-items: flex-start;
-        text-align: left;
-    }
-    .archives-button-container {
-        text-align: left;
-        margin-left: 0;
-    }
-    .archives-btn {
-        margin-left: 0;
-    }
-    .edition-item img {
-        margin-left: 0;
-    }
-}
 /* Footer */
 footer {
     background-color: #ffffff;
@@ -395,9 +338,6 @@ footer .container {
     color: #333333;
     text-decoration: none;
 }
-.footer-section ul li a:hover {
-    color: #f4f4f4;
-}
 /* Footer Link Styles */
 .footer-links {
     flex-basis: 100%;
@@ -429,38 +369,6 @@ footer .container {
     color: #000000;
     margin: 0 10px;
 }
-@media (max-width: 768px) {
-    footer .container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-right: 0;
-        padding-left: 0;
-    }
-    .footer-image-container1 {
-        margin-left: 0;
-        text-align: left;
-    }
-    .footer-section {
-        flex: 0 0 100%;
-        margin: 10px 0;
-    }
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-        justify-content: left;
-        text-align: left;
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-        margin-top: 10rem;
-    }
-    .footer-links a {
-        margin: 20px 0;
-    }
-    .separator{
-        display: none;
-    }
-}
 /* Personalizzazione della barra orizzontale */
 .separator-line {
     border: 0;
@@ -476,32 +384,9 @@ footer .container {
     text-align: left;
     padding: 3rem 1rem 0;
 }
-
 .footer-image {
     max-width: 150px;
     height: auto;
-}
-@media (min-width: 768px) {
-    .footer-layout {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    .footer-image {
-        flex: 0 0 auto;
-    }
-    .footer-section {
-        flex: 1;
-        padding-left: 2rem;
-    }
-}
-/* Responsive: centrare su mobile */
-@media (max-width: 768px) {
-    .footer-image-container {
-        justify-content: left;
-    }
-    .footer-image {
-        max-width: 100px;
-    }
 }
 /*da Use a 2025*/
 .legal-notice {
@@ -521,12 +406,6 @@ footer .container {
     color: #0078d4;
     text-decoration: underline;
 }
-@media (max-width: 768px) {
-    .legal-notice {
-        text-align: left;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }}
 /*da 2025 Advance a Local*/
 .copyright-notice {
     text-align: left;
@@ -545,13 +424,6 @@ footer .container {
 .copyright-notice a:hover {
     color: #0078d4;
     text-decoration: underline;
-}
-@media (max-width: 768px) {
-    .copyright-notice {
-        text-align: left;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
 }
 /*il resto fino in fondo*/
 .footer-legal-text {
@@ -575,9 +447,120 @@ footer .container {
     margin-bottom: 5rem;
 }
 @media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .weather-btn {
+        display: none;
+    }
+    /* Logo e Hamburger in linea su mobile */
+    .logo-menu-container {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+    }
+    .cle-logo {
+        position: static;
+        transform: none;
+        max-width: 80px;
+        height: auto;
+    }
+    .sign-in-container {
+        margin-left: 10px;
+    }
+    .sign-in-container .sign-in-text {
+        display: none;
+    }
+    .sign-in-btn:hover {
+        background-color: #333333;
+        border: 2px solid #333333;
+    }
+    .editions-grid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .edition-preview {
+        max-width: 100%;
+        text-align: left;
+    }
+    .edition-item {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .archives-button-container {
+        text-align: left;
+        margin-left: 0;
+    }
+    .archives-btn {
+        margin-left: 0;
+    }
+    .edition-item img {
+        margin-left: 0;
+    }
+    footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .footer-image-container1 {
+        margin-left: 0;
+        text-align: left;
+    }
+    .footer-section {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        text-align: left;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 3rem;
+    }
+    .footer-links a {
+        margin: 20px 0;
+    }
+    .separator{
+        display: none;
+    }
+    .footer-image-container {
+        justify-content: left;
+    }
+    .footer-image {
+        max-width: 100px;
+    }
+    .legal-notice {
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .copyright-notice {
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     .footer-legal-text {
         text-align: left;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .footer-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .footer-image {
+        flex: 0 0 auto;
+    }
+    .footer-section {
+        flex: 1;
+        padding-left: 2rem;
     }
 }
