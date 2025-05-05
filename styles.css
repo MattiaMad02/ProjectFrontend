@@ -120,8 +120,7 @@ header .container {
     line-height: 0.5;
 }
 .sign-in-btn:hover {
-    background-color: #333333;
-    border: 2px solid #ffffff;
+    background-color: #555555;
 }
 .arrow-down {
     margin: 0 0.2rem;
@@ -262,6 +261,11 @@ section {
     color: #000000;
     text-decoration: none;
 }
+.archives-separator {
+    width: 100%;
+    border-top: 1px solid #000000;
+    margin: 5px 0;
+}
 /* Footer */
 footer {
     background-color: #ffffff;
@@ -315,8 +319,7 @@ footer .container {
     justify-content: flex-start;
     align-items: center;
     margin-top: 1rem;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-left: 7rem;
 }
 .footer-links a {
     color:#555555;
@@ -344,7 +347,6 @@ footer .container {
     border: 0;
     height: 1px;
     background-color: #000000;
-    margin-bottom: 20px;
     width: 100%;
 }
 /*footer image*/
@@ -352,7 +354,7 @@ footer .container {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
-    padding: 3rem 1rem 0;
+    padding: 3rem 20rem 0;
 }
 .footer-image {
     max-width: 250px;
@@ -361,6 +363,7 @@ footer .container {
 /*da Use a 2025*/
 .legal-notice {
     max-width: 900px;
+    width: 50%;
     margin: 0 auto;
     text-align: left;
     font-size: 1rem;
@@ -379,7 +382,8 @@ footer .container {
 /*da 2025 Advance a Local*/
 .copyright-notice {
     text-align: left;
-    font-size: 0.95rem;
+    width: 50%;
+    font-size: 1rem;
     color: #555555;
     padding: 1rem 1rem 1.5rem;
     max-width: 900px;
@@ -398,6 +402,7 @@ footer .container {
 /*il resto fino in fondo*/
 .footer-legal-text {
     font-size: 1rem;
+    width: 50%;
     color: #555555;
     max-width: 900px;
     margin: 1rem auto 0;
