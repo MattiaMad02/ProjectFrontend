@@ -1,15 +1,3 @@
-/*function toggleDropdown() {
-    const dropdown = document.getElementById('signInDropdown');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-}
-// Close the dropdown if the user clicks anywhere
-window.onclick = function(event) {
-    if (!event.target.matches('.sign-in-btn')) {
-        const dropdown = document.getElementById('signInDropdown');
-        if (dropdown.style.display === 'block') {
-            dropdown.style.display = 'none';
-        }
-    }}*/
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -25,11 +13,20 @@ function getFormattedDate(date = new Date()) {
 }
 // Funzione per aggiornare la data nel DOM
 function updateTodayDate() {
-    const dateElement = document.querySelector('.edition-info p strong');
-    if (dateElement) {
-        dateElement.textContent = getFormattedDate();
+    const dateElement = document.querySelector('#today-date');
+    const descriptionEl = document.querySelector('#today-edition .small-text');
+    const readButton = document.querySelector('#today-edition .read-button');
+
+    if (dateElement && descriptionEl && readButton) {
+        const today = new Date();
+        const formattedDate = getFormattedDate(today);
+        const description = "The Plain Dealer's front page for";
+
+        dateElement.innerHTML = `<a href="https://www.cleveland.com/staff/mrose/posts.html" target="_blank">${description} ${formattedDate}</a>`;
+        descriptionEl.innerHTML = `<a href="https://www.cleveland.com/staff/mrose/posts.html" target="_blank">Mike Rose</a>`;
     }
 }
+
 // Funzione per aggiornare dinamicamente l'immagine con la data nel testo (opzionale)
 function updateFrontPageImage() {
     const image = document.querySelector('.edition-preview img');
@@ -37,7 +34,7 @@ function updateFrontPageImage() {
     const monthName = months[today.getMonth()];
     const day = today.getDate();
     const textParam = `Front+Page+${monthName}+${day}`;
-    image.src = `https://via.placeholder.com/600x800?text=${textParam}`;
+    image.src = `https://placehold.co/650x900?text=${textParam}`;
 }
 // Inizializza quando il DOM è pronto
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,19 +51,20 @@ function insertYesterdayNextToToday() {
     const year = yesterday.getFullYear();
     const yearShort = year.toString().slice(2);
     const readableDate = `${dayName}, ${monthName} ${day}, ${year}`;
-    const imageText = `${monthNum}/${day}/${yearShort}`;
+    const link = "https://www.cleveland.com/staff/mrose/posts.html";
+
     const html = `
-      <a href="https://www.cleveland.com/staff/mrose/posts.html" target="_blank">
-    <img src="https://via.placeholder.com/600x800?text=Front+Page+${monthName}+${day}" alt="Yesterday's edition front page" /></a>
-    <div class="edition-info">
-      <p><strong>${readableDate}</strong></p>
-       <p class="small-text">
-                    The Plain Dealer's front page for yesterday<br/>
-                    Mike Rose
-                </p>
-      <a href="#" class="read-button">Read Now</a>
-    </div>
-  `;
+        <div class="edition-preview">
+            <a href="${link}" target="_blank">
+                <img src="https://placehold.co/650x900?text=Front+Page+${monthName}+${day}" alt="Yesterday's edition front page" />
+            </a>
+            <div class="edition-info">
+                <p><strong><a href="${link}" target="_blank">The Plain Dealer's front page for ${readableDate}</a></strong></p>
+                <p class="small-text"><a href="${link}" target="_blank">Mike Rose</a></p>
+            </div>
+        </div>
+    `;
+
     document.getElementById("yesterday-edition").innerHTML = html;
 }
 document.addEventListener('DOMContentLoaded', () => {
