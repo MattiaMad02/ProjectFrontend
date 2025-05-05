@@ -51,7 +51,7 @@ function insertYesterdayNextToToday() {
     const year = yesterday.getFullYear();
     const yearShort = year.toString().slice(2);
     const readableDate = `${dayName}, ${monthName} ${day}, ${year}`;
-    const link = "https://www.cleveland.com/staff/mrose/posts.html";
+    const link = "https://link.esterno";
 
     const html = `
         <div class="edition-preview">
