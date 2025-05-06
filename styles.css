@@ -5,7 +5,6 @@ body {
     line-height: 1;
     background-color: #ffffff;
     color: #222;
-    overflow-x:hidden;
 }
 /* Header */
 header {
@@ -354,11 +353,13 @@ footer .container {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
-    padding: 3rem 20rem 0;
+    padding: 3rem 0 0;
+    display: flex;
+    justify-content: flex-start;
 }
 .footer-image {
     max-width: 250px;
-    height: auto;
+    margin-left: 100px;
 }
 /*da Use a 2025*/
 .legal-notice {
@@ -507,7 +508,7 @@ footer .container {
         align-items: center;
         justify-content: left;
         text-align: left;
-        width: 100%;
+        width: 65%;
         padding-left: 0;
         padding-right: 0;
         margin-top: 3rem;
@@ -521,23 +522,26 @@ footer .container {
     .footer-image-container {
         justify-content: left;
     }
-    .footer-image {
-        max-width: 100px;
+    .footer-image{
+        margin-left: 0;
     }
     .legal-notice {
         text-align: left;
         padding-left: 1rem;
         padding-right: 1rem;
+        width: 100%;
     }
     .copyright-notice {
         text-align: left;
         padding-left: 1rem;
         padding-right: 1rem;
+        width: 100%;
     }
     .footer-legal-text {
         text-align: left;
         padding-left: 1rem;
         padding-right: 1rem;
+        width: 100%;
     }
 }
 @media (min-width: 768px) {
